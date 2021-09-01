@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <!-- displays site properly based on user's device -->
+
+    <link
+      rel="icon"
+      type="image/png"
+      sizes="32x32"
+      href="./images/favicon-32x32.png"
+    />
+
+    <title>Frontend Mentor | Order summary card</title>
+
+    <!-- Feel free to remove these styles or customise in your own stylesheet 👍 -->
+    <link rel="stylesheet" href="src/style.css" />
+    <style>
+      .attribution {
+        display: none;
+        font-size: 11px;
+        text-align: center;
+      }
+      .attribution a {
+        color: hsl(228, 45%, 44%);
+      }
+    </style>
+  </head>
+  <body>
+    <div class="container">
+      <div class="card">
+        <img
+          src="/images/illustration-hero.svg"
+          alt="Illustration Hero"
+          class="card__image"
+        />
+        <div class="card__content">
+          <h1 class="card__title">Order Summary</h1>
+          <p class="card__description">
+            You can now listen to millions of songs, audiobooks, and podcasts on
+            any device anywhere you like!
+          </p>
+          <div class="price">
+            <div class="price__content">
+              <img
+                src="/images/icon-music.svg"
+                alt="Icon Music"
+                class="price__icon"
+              />
+              <div class="price__text">
+                <span class="price__text--primary">Annual Plan</span>
+                <span class="price__text--secondary">$59.99/year</span>
+              </div>
+            </div>
+            <a href="#" class="price__link"> Change </a>
+          </div>
+          <div class="card__action">
+            <button class="button button--primary">Proceed to Payment</button>
+            <button class="button button--secondary">Cancel Order</button>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="attribution">
+      Challenge by
+      <a href="https://www.frontendmentor.io?ref=challenge" target="_blank"
+        >Frontend Mentor</a
+      >. Coded by <a href="#">Anthony Smith Aguirre</a>.
+    </div>
+  </body>
+</html>
