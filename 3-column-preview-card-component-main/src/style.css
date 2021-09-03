@@ -1,0 +1,120 @@
+@import url("https://fonts.googleapis.com/css2?family=Big+Shoulders+Display:wght@700&family=Lexend+Deca&display=swap");
+:root {
+  /* Layout */
+  --mobile: 375px;
+  --desktop: 1440px;
+
+  /* Colors */
+  --bright-orange: hsl(31, 77%, 52%);
+  --dark-cyan: hsl(184, 100%, 22%);
+  --very-dark-cyan: hsl(179, 100%, 13%);
+
+  --transparent-white: hsla(0, 0%, 100%, 0.75); /* (paragraphs) */
+  --very-light-gray: hsl(0, 0%, 95%); /* (background, headings, buttons) */
+
+  /* Typography */
+  --font-size: 15px;
+  /* 
+    font-family: 'Big Shoulders Display', cursive;
+    font-family: 'Lexend Deca', sans-serif;
+    */
+}
+html {
+  box-sizing: border-box;
+}
+*,
+*::before,
+*::after {
+  box-sizing: inherit;
+}
+body,
+h1,
+p {
+  margin: 0;
+  padding: 0;
+}
+.main {
+  min-height: 100vh;
+  background-color: var(--very-light-gray);
+  font-family: "Big Shoulders Display", cursive;
+  font-size: var(--font-size);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.container {
+  max-width: 322px;
+  border-radius: 0.5rem;
+  overflow: hidden;
+  display: flex;
+  flex-direction: column;
+}
+.card {
+  padding: 3rem;
+  color: white;
+  display: flex;
+  flex-flow: column;
+  justify-content: space-between;
+  align-items: flex-start;
+  min-height: 440px;
+}
+.card--orange {
+  background-color: var(--bright-orange);
+}
+.card--cyan {
+  background-color: var(--dark-cyan);
+}
+.card--dark {
+  background-color: var(--very-dark-cyan);
+}
+.card__icon {
+  max-width: 64px;
+}
+.card__title {
+  font-size: 2.5rem;
+  text-transform: uppercase;
+}
+.card__text {
+  color: var(--transparent-white);
+  font-family: "Lexend Deca", sans-serif;
+  line-height: 1.5rem;
+}
+.button {
+  border: none;
+  background-color: white;
+  padding: 1rem 2.5rem;
+  border-radius: 2rem;
+  font-weight: 400;
+  font-family: "Lexend Deca", sans-serif;
+  transition: all 0.2s;
+}
+.button:hover {
+  background-color: transparent;
+  border: 2px solid white;
+  color: white;
+}
+.card__content {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  min-height: 260px;
+}
+.button--orange {
+  color: var(--bright-orange);
+}
+.button--cyan {
+  color: var(--dark-cyan);
+}
+.button--dark {
+  color: var(--very-dark-cyan);
+}
+@media (min-width: 1440px) {
+  .container {
+    flex-flow: row;
+    max-width: auto;
+    min-width: 920px;
+  }
+  .card {
+    min-height: 500px;
+  }
+}
