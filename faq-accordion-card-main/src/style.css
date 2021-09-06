@@ -1,0 +1,148 @@
+@import url("https://fonts.googleapis.com/css2?family=Kumbh+Sans:wght@400;700&display=swap");
+
+:root {
+  /* ## Colors */
+  /* ### Primary */
+  /* #### Text */
+  --very-dark-desaturated-blue: hsl(238, 29%, 16%);
+  --soft-red: hsl(14, 88%, 65%);
+
+  /* #### Gradient */
+  /* Background gradient: */
+  --soft-violet: hsl(273, 75%, 66%);
+  --soft-blue: hsl(240, 73%, 65%);
+
+  /* ### Neutral */
+  /* #### Text */
+  --very-dark-grayish-blue: hsl(237, 12%, 33%);
+  --dark-grayish-blue: hsl(240, 6%, 50%);
+
+  /* #### Dividers */
+  --light-grayish-blue: hsl(240, 5%, 91%);
+
+  /* ## Typography */
+  /* ### Body Copy */
+  --font-size: 12px;
+  /* font-family: 'Kumbh Sans', sans-serif; */
+}
+
+html {
+  box-sizing: border-box;
+}
+*,
+*::before,
+*::after {
+  box-sizing: inherit;
+}
+body,
+h1,
+p {
+  margin: 0;
+}
+img {
+  display: block;
+  max-width: 100%;
+}
+.container {
+  min-height: 100vh;
+  font-size: 12px;
+  font-family: "Kumbh Sans", sans-serif;
+  background: linear-gradient(var(--soft-violet), var(--soft-blue));
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.card__image {
+  position: absolute;
+  top: -120px;
+  left: 15px;
+  width: 270px;
+  height: 230px;
+  background: url("../images/illustration-woman-online-mobile.svg"),
+    url("../images/bg-pattern-mobile.svg");
+  background-repeat: no-repeat;
+  background-position: center, 100% 100%;
+}
+.card {
+  position: relative;
+  margin-top: 2.5rem;
+  background-color: white;
+  border-radius: 1.5rem;
+  width: 330px;
+  display: flex;
+}
+.card__content {
+  margin-top: 4.5rem;
+  padding: 3rem 1.5rem;
+}
+.card__title {
+  text-align: center;
+  font-size: 2rem;
+  margin: 1rem 0;
+  color: var(--very-dark-desaturated-blue);
+}
+.accordion {
+  font-family: "Kumbh Sans", sans-serif;
+  background: transparent;
+  border: none;
+  padding: 1rem 0;
+  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  transition: all 0.4s;
+  color: var(--very-dark-grayish-blue);
+  cursor: pointer;
+}
+.accordion.active {
+  color: var(--very-dark-desaturated-blue);
+  font-weight: 700;
+}
+.accordion:hover,
+.accordion.active:hover {
+  color: var(--soft-red);
+}
+.accordion__icon {
+  transition: transform 0.4s;
+}
+.accordion.active .accordion__icon {
+  transform: rotate(180deg);
+}
+.panel {
+  color: var(--dark-grayish-blue);
+  line-height: 1.2rem;
+  max-height: 0;
+  overflow: hidden;
+  transition: max-height 0.2s ease-out;
+  border-bottom: 1px solid var(--light-grayish-blue);
+}
+.panel p {
+  max-width: 95%;
+  margin-bottom: 1rem;
+}
+
+@media (min-width: 1440px) {
+  .card {
+    margin: 0;
+    min-width: 900px;
+    min-height: 500px;
+    background: url("../images/illustration-woman-online-desktop.svg"),
+      url("../images/bg-pattern-desktop.svg"), linear-gradient(white, white);
+    background-repeat: no-repeat;
+    justify-content: flex-end;
+    background-position: -18% 50%, 870% 65%;
+  }
+  .card__image {
+    background: url("../images/illustration-box-desktop.svg") no-repeat;
+    top: 200px;
+    left: -90px;
+  }
+  .card__title {
+    text-align: left;
+  }
+  .card__content {
+    margin: 0;
+    margin-right: 4rem;
+    max-width: 380px;
+  }
+}
